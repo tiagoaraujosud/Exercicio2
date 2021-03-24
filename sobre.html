@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Título da página</title>
+    <meta charset="utf-8">
+
+    <link href="estilo.css" rel="stylesheet">
+  </head>
+
+  <script type="text/javascript">
+    
+    function verificacampo(){
+      var camponome = document.getElementById("login").value;
+
+      if (document.getElementById("login").value.length < 3) {
+        document.getElementById("login").focus();
+        document.getElementById("login").style.border  = "3px solid #ef3c59";
+        document.getElementById("textinho").innerHTML='<p class="help-block ng-binding" style="color:#ef3c59;">Preencha todos os campos!</p>';
+        return false
+     
+      }else if (document.getElementById("senha").value.length < 3) {
+        document.getElementById("senha").focus();
+        document.getElementById("senha").style.border  = "3px solid #ef3c59";
+        document.getElementById("textinho").innerHTML='<p class="help-block ng-binding" style="color:#ef3c59;">Preencha todos os campos!</p>';
+        return false
+      }else{
+
+        alert("Login para " + camponome + " efetuado com sucesso!!!")
+      }
+     
+    }
+
+    function mudacor(){
+
+      var valor = document.getElementById("login");
+      valor.label.style.color = "green";
+      
+    }
+
+    function mudacorbotao(){
+      document.getElementById("botao").style.backgroundColor = "darkgray";
+    }
+
+
+  </script>
+  <body>
+
+  	<form class="form-horizontal" id="formulario" name="formulario" method="get" onsubmit="return verificacampo(this)">
+  		  <label for="log">Login:</label><br>
+  		  <input type="text" id="login" onclick="mudacor(this)" name="login"><br>
+  		  <label for="psw">Senha:</label><br>
+        <input type="password" id="senha" name="senha">
+  		  <input type="submit" id="botao" onmouseover="mudacorbotao()" value="Entrar">
+        <p id="textinho"></p>
+	   </form>
+
+    <h1>Diário Eletrônico</h1>
+
+    <img src="img1.png">
+    imagem ilustrativa
+
+    <h2>Dia 1</h2>
+
+    <p>A amizade consegue ser tão complexa...
+	Deixa uns desanimados, outros bem felizes...
+	É a alimentação dos fracos
+	É o reino dos fortes</p>
+
+	<h2>Dia 2</h2>
+
+    <p>Faz-nos cometer erros
+	Os fracos deixam se ir abaixo
+	Os fortes erguem sempre a cabeça
+	os assim assim assumem-os</p>
+
+	<h2>Dia 3</h2>
+
+    <p>Sem pensar conquistamos
+	O mundo geral
+	e construímos o nosso pequeno lugar
+	deixando brilhar cada estrelinha</p>
+
+	<h2>Dia 4</h2>
+
+    <p>Estrelinhas...
+	Doces, sensíveis, frias, ternurentas...
+	Mas sempre presentes em qualquer parte
+	Os donos da amizade...</p>
+
+  </body>
+
+</html>
